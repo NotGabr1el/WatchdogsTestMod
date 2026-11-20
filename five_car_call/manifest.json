@@ -1,0 +1,6 @@
+{
+  "name": "Five Car Call",
+  "version": "0.1",
+  "entrypoint": "main.lua",
+  "keyBinds": { "police": "F6", "gang": "F7", "fbi": "F8", "clear": "F9" }
+}
