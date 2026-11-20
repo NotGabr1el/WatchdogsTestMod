@@ -4,11 +4,13 @@
 
 ## Install on Windows
 
-1. Install Nomad Group’s WD2 ScriptHook with the trainer data first, and close the game.
-2. **[Download the installer ZIP](Five-Car-Call-Prototype-Installer.zip?raw=true)** and choose **Extract All**. You do not need to clone the repository.
-3. Double-click `Install.cmd`, then paste the Watch Dogs 2 folder that contains `bin/WatchDogs2.exe`. Restart in offline story mode.
+1. Close Watch Dogs 2. **[Download the installer ZIP](Five-Car-Call-Prototype-Installer.zip?raw=true)** and choose **Extract All**.
+2. Double-click `Install.cmd` and enter the game folder containing `bin/WatchDogs2.exe`.
+3. If the trainer is missing, the script downloads Nomad Group’s WD2 ScriptHook r185 installer over HTTPS. Review the setup prompt, select the same game folder in the vendor wizard, and include the trainer. The script waits for setup, checks the trainer files, and then installs Five Car Call. Start the game in offline story mode.
 
-**Updating?** Move your existing `data/scripts/five_car_call` folder outside the scripts directory first. The installer never overwrites it. For a manual install, copy the extracted `five_car_call` folder into `data/scripts/`.
+Existing trainer installs skip the download. If the publisher is unreachable, retry later or use a trusted local vendor installer from PowerShell: `& .\tools\Install-Prototype.ps1 -ScriptHookInstaller 'C:\Downloads\Watch_Dogs2-ScriptHook-Installer_r185.exe'`. Third-party binaries are not bundled.
+
+**Updating?** Move your existing `bin/ScriptHook/data/scripts/five_car_call` folder outside the scripts directory first. The installer never overwrites it. For a manual install, copy the extracted `five_car_call` folder into `bin/ScriptHook/data/scripts/`.
 
 ## Play
 
